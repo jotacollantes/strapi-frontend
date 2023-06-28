@@ -27,15 +27,7 @@ const PagePagination = ({pagination}:Props) => {
     {/* <li>
       <a href="#" className="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
     </li> */}
-    {
-        Array.from({length: pageCount}).map((_,ix:number)=>(<li>
-            <Link href={`/blog?page=${ix+1}`} className={
-                ix+1===page ? classNumberActive :classNumber
-            }>
-             {ix+1}
-             </Link>
-          </li>))
-    }
+   
     
     <li>
     <Link href={page === pageCount ? `/blog?page=${page}` :`/blog?page=${page-1}`}
